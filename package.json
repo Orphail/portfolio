@@ -1,0 +1,19 @@
+{
+  "name": "@example/basics",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "devDependencies": {
+    "@astrojs/alpinejs": "^0.1.0",
+    "@astrojs/tailwind": "^1.0.0",
+    "@types/alpinejs": "^3.7.0",
+    "alpinejs": "^3.10.3",
+    "astro": "^1.0.9"
+  }
+}

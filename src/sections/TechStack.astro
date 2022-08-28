@@ -1,0 +1,22 @@
+---
+import StackGroup from "@/components/StackGroups.astro";
+import frontend from "@/data/frontend.json";
+import backend from "@/data/backend.json";
+import dbs from "@/data/dbs.json";
+import systems from "@/data/systems.json";
+---
+
+<div class="mt-12" id="stack">
+    <div class="pb-12 pt-24 text-center">
+        <h2 class="text-5xl font-bold">
+            <span class="hover-underline-effect">Tech stack</span>
+        </h2>
+    </div>
+    
+    <div class="flex flex-col gap-24">
+        <StackGroup name="Frontend" stacks={frontend} icon="mdi:code" />
+        <StackGroup name="Backend" stacks={backend} icon="mdi:code-braces" />
+        <StackGroup name="Databases" stacks={dbs} icon="mdi:database-outline" />
+        <StackGroup name="Systems" stacks={systems} icon="mdi:cog-outline" />
+    </div>
+</div>

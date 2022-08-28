@@ -1,7 +1,7 @@
 ---
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import ScrollToTop from '../components/ScrollToTop.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import ScrollToTop from '@/components/ScrollToTop.astro';
 
 export interface Props {
 	title: string;
@@ -11,28 +11,35 @@ const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="description" content="Orphail's portfolio">
+		<meta property="og:title" content="Orphail's portfolio"/>
+		<meta property="og:description" content="Orphail's portfolio"/>
+		<meta property="og:image" content="./favicon-32x32.png"/>	
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css?family=JetBrains Mono" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=JetBrains Mono" rel="preload" as="font">
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		<script></script>
 	</head>
-	<body class="antialiased bg-gray-100 dark:bg-gray-900 ">
+	<body class="antialiased bg-gray-100 dark:bg-gray-900 sm:mb-0 mb-11">
 		<Header/>
-		<div class="relative flex items-top justify-center min-h-screen sm:items-center dark:text-white text-black">
+		<div class="relative flex items-top justify-center min-h-screen sm:items-center dark:text-gray-100 text-gray-900 mb-32 mt-20">
 			<slot />
 		</div>
 		<Footer/>
 		<ScrollToTop/>
 	</body>
 </html>
-<style>
+<style is:global>
 	html {
 		font-family: 'JetBrains Mono', monospace;
 	}
+    .button-focus {
+        @apply focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700;
+    }
 </style>

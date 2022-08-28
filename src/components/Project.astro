@@ -1,0 +1,21 @@
+---
+export interface Props {
+	project: object;
+}
+
+const { project } = Astro.props as Props;
+---
+
+<div class="flex items-top gap-12">
+    <div class="hidden md:block rounded-xl lg:w-1/3 md:w-2/5 md:h-44 bg-cover bg-no-repeat bg-center" style={`background-image: url('${project.image}')`}></div>
+    <div class="flex flex-col gap-4 lg:w-2/3 md:w-3/5">
+        <a  href={project.link} 
+            target="_blank" 
+            class="text-3xl font-bold group hover:text-sky-600 transition ease-in-out duration-200"
+        >
+            {project.title} <span aria-hidden="true" class="inline-block translate-x-0 group-hover:translate-x-1 transition-transform ease-in-out duration-200">→</span>
+        </a>
+        <div class="md:hidden rounded-xl w-full h-56 sm:h-56 bg-cover bg-no-repeat bg-center align-self-center" style={`background-image: url('${project.image}')`}></div>
+        <p class="">{project.description}</p>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+[
+    {"name": "Vue", "logo": "logos:vue", "description": "Vue 2/3 + Vuex/Pinia", "link": "https://vuejs.org/", "fromYear": 2019, "fromMonth": 7},
+    {"name": "TailwindCSS", "logo": "logos:tailwindcss-icon", "description": "TailwindCSS", "link": "https://tailwindcss.com/", "fromYear": 2020, "fromMonth": 2},
+    {"name": "AlpineJS", "logo": "logos:alpinejs-icon", "description": "AlpineJS", "link": "https://alpinejs.dev/", "fromYear": 2020, "fromMonth": 11},
+    {"name": "Astro", "logo": "logos:astro", "description": "Astro", "link": "https://astro.build/", "fromYear": 2022, "fromMonth": 8},
+    {"name": "Vite", "logo": "logos:vitejs", "description": "Vite", "link": "https://vitejs.dev/", "fromYear": 2022, "fromMonth": 6}
+]

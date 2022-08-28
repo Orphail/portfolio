@@ -1,0 +1,18 @@
+[
+    {
+        "title": "BLD Manager",
+        "description": "A Laravel web app used for most of the day-to-day functions in a transport and logistics company. It integrates TMS and BI modules on top of the internal ERP, allowing full control of the company's expeditions. It also includes an customer API for the company's clients to record and track their shipments.",
+        "image": "/images/bld.png",
+        "year": 2020,
+        "month": 7,
+        "link": "https://grupobld.com"
+    },
+    {
+        "title": "Hortishop ERP",
+        "description": "An SPA created for a horticultural e-commerce, using Vue3 for the frontend and Laravel for the backend. It focuses on providers and customers integrations via API and EDI files, and it includes an admin panel for the company's employees to manage the products, orders, customers, etc.",
+        "image": "/images/hortishop.png",
+        "year": 2022,
+        "month": 4,
+        "link": "https://hortishopping.com"
+    }
+]

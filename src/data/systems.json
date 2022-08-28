@@ -1,0 +1,7 @@
+[
+    {"name": "Docker", "logo": "logos:docker-icon", "description": "Docker / Docker compose", "link": "https://www.docker.com/", "fromYear": 2020, "fromMonth": 7},
+    {"name": "Nginx", "logo": "logos:nginx", "description": "Nginx", "link": "https://www.nginx.com/", "fromYear": 2020, "fromMonth": 6},
+    {"name": "Apache", "logo": "logos:apache", "description": "Apache", "link": "https://httpd.apache.org/", "fromYear": 2018, "fromMonth": 6},
+    {"name": "Git", "logo": "logos:git-icon", "description": "Git", "link": "https://git-scm.com/", "fromYear": 2018, "fromMonth": 6},
+    {"name": "Bash", "logo": "logos:bash-icon", "description": "Bash commands", "link": "https://www.gnu.org/software/bash/", "fromYear": 2018, "fromMonth": 6}
+]

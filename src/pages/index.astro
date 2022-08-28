@@ -1,14 +1,22 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Intro from '../components/Intro.astro';
+import AboutMe from '../components/AboutMe.astro';
+import Skills from '../components/Skills.astro';
+import Contact from '../components/Contact.astro';
 ---
 
 <Layout title="Orphail's Portfolio">
-	<main>
-		<h1>Holi</h1>
+	<main class="xl:max-w-5xl lg:max-w-4xl md:max-w-2xl max-w-lg w-full mx-10">
+		<Intro/>
+		<AboutMe/>
+		<Skills/>
+
+		<Contact/>
 	</main>
 </Layout>
-
-<style>
-	.link-card-grid {
+<style is:global>
+	.hover-underline-effect {
+		@apply relative after:absolute dark:after:bg-gray-200 after:bg-black after:bottom-0 after:left-0 after:h-[2px] after:w-full after:translate-y-1 after:opacity-0 hover:after:translate-y-0 hover:after:opacity-100 after:transition after:ease-in-out after:duration-200
 	}
 </style>

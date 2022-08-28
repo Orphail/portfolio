@@ -2,6 +2,14 @@
 import DarkModeButton from '../components/DarkModeButton.astro';
 ---
 
-<div class="bg-gray-100 dark:bg-gray-900 sm:items-center dark:text-white text-black flex gap-6 items-center justify-end px-4 py-4 sm:px-6 lg:px-8">
+<header class="sm:items-center dark:text-white text-black flex gap-6 items-center justify-end px-4 py-4 sm:px-6 lg:px-8 sticky top-0 bg-transparent z-50">
     <DarkModeButton/>
-</div>
+</header>
+<style is:global>
+    .header-button {
+		@apply text-gray-500 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-lg;
+	}
+    .button-focus {
+        @apply focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700;
+    }
+</style>

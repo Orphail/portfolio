@@ -1,0 +1,6 @@
+[
+    {"name": "Laravel", "logo": "logos:laravel", "description": "Laravel - Main framework", "link": "https://laravel.com/", "fromYear": 2018, "fromMonth": 6},
+    {"name": "PHP", "logo": "logos:php", "description": "PHP - main language", "link": "https://www.php.net/", "fromYear": 2018, "fromMonth": 6},
+    {"name": "Go", "logo": "logos:gopher", "description": "Go", "link": "https://go.dev/", "fromYear": 2020, "fromMonth": 12},
+    {"name": "Firebase", "logo": "logos:firebase", "description": "Firebase", "link": "https://firebase.google.com/", "fromYear": 2021, "fromMonth": 7}
+]

@@ -1,0 +1,37 @@
+---
+import Orphail from "./Orphail.astro";
+---
+
+<div class="my-32">
+    <div class="mb-12 text-center">
+        <h2 class="text-5xl font-bold">
+            <span class="hover-underline-effect">About me</span>
+        </h2>
+    </div>
+    
+    <div class="flex items-center justify-around lg:gap-16">
+        <div class="hidden lg:flex items-center relative w-5/6 h-fit aspect-square dark:bg-gray-800 bg-zinc-500 xl:p-10 p-16 rounded-full">
+            <Orphail/>
+        </div>
+        <div class="flex flex-col justify-between gap-10 dark:bg-gray-800 bg-gray-200 rounded-lg p-8">
+            <div class="lg:hidden flex items-center justify-center relative w-full h-28">
+                <Orphail/>
+            </div>    
+            <p class="text-sm md:text-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aspernatur at sit neque corporis possimus! Odio nihil mollitia fugit debitis error minus sapiente earum alias sit architecto provident expedita cum distinctio voluptatem esse, beatae laborum voluptas repellat voluptatum, libero incidunt quaerat.</p>
+            <div class="flex justify-between text-center  gap-4">
+                <div>
+                    <div class="font-bold md:text-3xl text-2xl">+4 🔥</div>
+                    <div class="md:text-sm text-xs">Years of experience</div>
+                </div>
+                <div>
+                    <div class="font-bold md:text-3xl text-2xl">+10 💻</div>
+                    <div class="md:text-sm text-xs">Completed projects</div>
+                </div>
+                <div>
+                    <div class="font-bold md:text-3xl text-2xl">+4 🧑‍💼</div>
+                    <div class="md:text-sm text-xs">Companies worked</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,188 @@
+
+<div class="container lg:-left-4 left-0 right-0 mx-auto lg:top-auto top-4">
+    <div class="body">
+        <div class="hand1"></div>
+        <div class="hand2"></div>
+    </div>
+    <div class="hair"></div>
+    <div class="head">
+        <div class="mustache"></div>
+    </div>
+    <div class="computer"></div>      
+</div>
+<style>
+    :root {
+        --laptop: #151619;
+        --laptop_shadow: #C0C0C0;
+        --flesh: #fef1ec;
+        --black: #000000;
+        --shirt: #212121;
+        --hair: #b57e2c;
+        --beard: #c46e2d;
+    }
+
+    body {
+        background-color: #333;
+        height: 100%;
+    }
+
+    .container {
+        width: 160px;
+        height: 120px;
+        position: absolute;
+        z-index: 2;
+    }
+
+    .mustache {
+        background-color: transparent;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 18px;
+        bottom: 0;
+        z-index: 1;
+        border-top-right-radius: 20px;
+        border-top-left-radius: 20px;
+        border: var(--beard) 5px solid;
+    }
+
+    .head {
+        background-color: var(--flesh);
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-radius: 25px 25px 23px 23px;
+        box-shadow: inset -1px -8px  var(--beard);
+    }
+
+    .head::before {
+        content: '';
+        position: absolute;
+        background-color: var(--black);
+        height: 10px;
+        width: 5px;
+        top: 15px;
+        left: 10px;
+        border-radius: 100%;
+    }
+
+    .head::after{
+        content: '';
+        position: absolute;
+        background-color: var(--black);
+        height: 10px;
+        width: 5px;
+        top: 15px;
+        left: 30px;
+        border-radius: 100%;
+    }
+
+    .hair {
+        background-color: var(--hair);
+        width: 60px;
+        height: 80px;
+        position: absolute;
+        right: -6px;
+        top: -7px;
+        border-top-left-radius: 60%;
+        border-top-right-radius: 60%;
+        border-bottom-left-radius: 70%;
+        border-bottom-right-radius: 70%;
+        z-index: -1;
+    }
+
+    .computer {
+        background-color: var(--laptop);
+        width: 80px;
+        height: 60px;
+        border-radius: 5px;
+        box-shadow: inset -5px 0 0 var(--laptop_shadow);
+        position: absolute;
+        top: 30px;
+        left: 15px;
+    }
+
+    .computer::before {
+        content: '';
+        position: absolute;
+        background-color: var(--laptop_shadow);
+        height: 5px;
+        width: 40px;
+        bottom: 0;
+        right: -35px;
+        border-radius: 5px;
+    }
+
+    .body {
+        position: absolute;
+        background-color: var(--shirt);
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        right: 0px;
+        top: 52px;
+        box-shadow: inset -5px -5px 0 var(--black);
+        transform: perspective(10px) rotateX(-2deg);
+    }
+
+    .body::before {
+        position: absolute;
+        content: '';
+        background-color: var(--flesh);
+        width: 15px;
+        height: 20px;
+        border-radius: 5px;
+        left: 16px;
+        top: -10px;
+    }
+
+    .hand1, .hand2 {
+        background-color: var(--flesh);
+        width: 35px;
+        height: 10px;
+        border-radius: 5px;
+        position: absolute;
+        right: 10px;
+        top: 18px;
+    }
+
+    .hand2 {
+        right: 46px;
+        width: 15px;
+        animation: typing .4s ease-in-out infinite alternate;
+    }
+    .hand1 {
+        animation: typing .4s .4s ease-in-out infinite alternate;
+    }
+
+    .hand1::before {
+        content: '';
+        position: absolute;
+        background-color: var(--flesh);
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        top: 5px;
+    }
+
+    .hand2::before {
+        content: '';
+        position: absolute;
+        background-color: var(--flesh);
+        height: 10px;
+        width: 10px;
+        border-radius: 5px;
+        top: 5px;
+    }
+
+    @keyframes typing {
+        from {
+            transform: translateY(-5px);
+        }
+        to {
+            transform: translateY(5px);
+        }
+    }
+</style>

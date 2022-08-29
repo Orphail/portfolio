@@ -5,22 +5,25 @@ import HeaderLink from '@/components/HeaderLink.astro';
 ---
 
 <header x-data='{toggleMenu: false}'
-        class="sm:items-center dark:text-gray-100 text-black flex flex-grow sm:gap-6 gap-2 items-center justify-end sm:p-4 px-3 fixed right-0 sm:top-0 top-auto bottom-0 sm:bottom-auto sm:bg-transparent sm:dark:bg-transparent bg-gray-300 dark:bg-gray-700 w-full z-50"
+        class="sm:items-center dark:text-gray-100 text-black flex flex-grow sm:gap-6 gap-2 items-center justify-end sm:p-4 px-3 fixed right-0 sm:top-0 top-auto bottom-0 sm:bottom-auto sm:bg-transparent sm:dark:bg-transparent bg-gray-100 dark:bg-gray-900 w-full z-50"
 >
     <span class="hidden sm:block">
-        <HeaderLink href="#top" name="Home"/>
+        <HeaderLink href="#top" name="Home" external="false"/>
     </span>
     <span class="hidden sm:block">
-        <HeaderLink href="#about_me" name="About"/>
+        <HeaderLink href="#about_me" name="About" external="false"/>
     </span>
     <span class="hidden sm:block">
-        <HeaderLink href="#stack" name="Stack"/>
+        <HeaderLink href="#stack" name="Stack" external="false"/>
     </span>
     <span class="hidden sm:block">
-        <HeaderLink href="#projects" name="Projects"/>
+        <HeaderLink href="#projects" name="Projects" external="false"/>
     </span>
     <span class="hidden sm:block">
-        <HeaderLink href="#contact" name="Contact"/>
+        <HeaderLink href="#contact" name="Contact" external="false"/>
+    </span>
+    <span class="hidden sm:block">
+        <HeaderLink href="https://linkedin.com/in/dani-martinez-fernandez" name="Resume" external="true"/>
     </span>
     <div x-show="toggleMenu"
          x-transition:enter="transition ease-out duration-100"
@@ -28,15 +31,16 @@ import HeaderLink from '@/components/HeaderLink.astro';
          x-transition:leave="transition ease-in duration-75"
          x-transition:leave-start="opacity-100 transform scale-100"
          x-transition:leave-end="opacity-0 transform scale-95"
-         class="sm:hidden h-28 w-full bg-gray-300 dark:bg-gray-700 absolute left-0 bottom-11"
+         @click="toggleMenu = false"
+         class="sm:hidden h-28 w-full bg-gray-100 dark:bg-gray-900 absolute left-0 bottom-11"
     >
         <div class="h-full grid grid-cols-3 items-center justify-items-center gap-6 px-8 py-4">
-            <HeaderLink href="#top" name="Home"/>
-            <HeaderLink href="#about_me" name="About"/>
-            <HeaderLink href="#stack" name="Stack"/>
-            <HeaderLink href="#projects" name="Projects"/>
-            <HeaderLink href="#contact" name="Contact"/>
-            <HeaderLink href="#contact" name="Contact"/>
+            <HeaderLink href="#top" name="Home" external="false"/>
+            <HeaderLink href="#about_me" name="About" external="false"/>
+            <HeaderLink href="#stack" name="Stack" external="false"/>
+            <HeaderLink href="#projects" name="Projects" external="false"/>
+            <HeaderLink href="#contact" name="Contact" external="false"/>
+            <HeaderLink href="https://linkedin.com/in/dani-martinez-fernandez" name="Resume" external="true"/>
         </div>
     </div>
     <DarkModeButton/>

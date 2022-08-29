@@ -1,18 +1,42 @@
 [
     {
         "title": "BLD Manager",
-        "description": "A Laravel web app used for most of the day-to-day functions in a transport and logistics company. It integrates TMS and BI modules on top of the internal ERP, allowing full control of the company's expeditions. It also includes an customer API for the company's clients to record and track their shipments.",
+        "description": "A Laravel web app used for most of the day-to-day functions in a transport and logistics company. It integrates TMS and BI modules on top of the internal ERP, allowing full control of the company's expeditions. It also includes a customer API for the company's clients to record and track their shipments.",
         "image": "/images/bld.png",
-        "year": 2020,
+        "year": 2019,
         "month": 7,
         "link": "https://grupobld.com"
     },
     {
         "title": "Hortishop ERP",
-        "description": "An SPA created for a horticultural e-commerce, using Vue3 for the frontend and Laravel for the backend. It focuses on providers and customers integrations via API and EDI files, and it includes an admin panel for the company's employees to manage the products, orders, customers, etc.",
+        "description": "A SPA created for horticultural e-commerce, using Vue3 for the front end and Laravel for the back end. It focuses on provider and customer integrations via API and EDI files, and it includes an admin panel for the company's employees to manage the products, orders, customers, etc.",
         "image": "/images/hortishop.png",
         "year": 2022,
         "month": 4,
         "link": "https://hortishopping.com"
+    },
+    {
+        "title": "My Portfolio",
+        "description": "This is the portfolio you're currently at. It's a static site built with Astro and TailwindCSS. It is in a public repository on GitHub, so you can check it out if you want 😉.",
+        "image": "/images/orphail.png",
+        "year": 2022,
+        "month": 8,
+        "link": "https://github.com/Orphail/astro-portfolio"
+    },
+    {
+        "title": "UT Emporda",
+        "description": "A commercial website for a regional tourist guide company. It uses ElasticSearch as its full-text search engine and features a handmade CMS to manage the website's content.",
+        "image": "/images/utemporda.png",
+        "year": 2018,
+        "month": 10,
+        "link": "https://utemporda.com"
+    },
+    {
+        "title": "The Wine Studio",
+        "description": "The Wine Studio is a WSET educational company that offers wine tasting courses and wine events. The web features an inscription system for its courses and includes a CMS to manage the content.",
+        "image": "/images/thewinestudio.png",
+        "year": 2022,
+        "month": 8,
+        "link": "https://thewinestudio.es/"
     }
 ]

@@ -7,9 +7,71 @@ import { Icon } from 'astro-icon'
     <div class="my-10">
         <div class="pb-4">
             <div class="text-5xl font-bold pb-1">Daniel Martinez</div>
-            <div class="font-normal text-2xl">Full St<b>u</b>ck Developer</div>
+            <div class="font-normal text-2xl h-6"
+            x-data="{
+                text: '',
+                textArray : ['Full Stuck Developer', 'Full Stack Developer'],
+                textIndex: 0,
+                charIndex: 0,
+                pauseEnd: 1000,
+                cursorSpeed: 420,
+                pauseStart: 20,
+                typeSpeed: 75,
+                direction: 'forward'
+             }" 
+            x-init="(() => { 
+                let typingInterval = setInterval(startTyping, $data.typeSpeed);
+             
+                function startTyping(){
+                    let current = $data.textArray[ $data.textIndex ];
+                    if($data.charIndex > current.length){
+                        $data.direction = 'backward';
+                        clearInterval(typingInterval);
+                        setTimeout(function(){
+                            typingInterval = setInterval(startTyping, $data.typeSpeed);
+                        }, $data.pauseEnd);
+                    }   
+                    
+                    $data.text = current.substring(0, $data.charIndex);
+                    if($data.direction == 'forward'){
+                        $data.charIndex += 1;
+                        if($data.textIndex == $data.textArray.length - 1 && $data.charIndex == current.length + 1){
+                            clearInterval(typingInterval);
+                        }
+                    } else {
+                        if($data.charIndex == 8){
+                            $data.direction = 'forward';
+                            clearInterval(typingInterval);
+                            setTimeout(function(){
+                            
+                                $data.textIndex += 1;
+                                if($data.textIndex >= $data.textArray.length){
+                                    $data.textIndex = 0;
+                                }
+                            
+                                typingInterval = setInterval(startTyping, $data.typeSpeed);
+                            }, $data.pauseStart);
+                        }
+                        $data.charIndex -= 1;
+                    }
+                }
+                setInterval(function(){
+                    if($refs.cursor.classList.contains('hidden')){
+                        $refs.cursor.classList.remove('hidden');
+                    } else {
+                        $refs.cursor.classList.add('hidden');
+                    }
+                 }, $data.cursorSpeed);
+            })()"
+        >
+                <div class="flex items-center">
+                    <span x-text="text"></span>
+                    <span class="h-full w-1 ml-1 dark:bg-gray-100 bg-gray-900" x-ref="cursor">&nbsp;</span>
+                </div>
+            </div>
         </div>
         <p class="text-sm md:text-lg">
+            <span x-text="text"></span>
             I am a reconverted engineer passionate about web development and computing science. I have a soft spot for the backend, but I cannot conceive of developing without design and user experience in mind.
         </p>
         <div class="mt-5 flex items-center justify-between">

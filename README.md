@@ -14,14 +14,18 @@ Inside of it, you'll see the following folders and files:
 │   │   ├── /**
 │   │   ├── *
 │   │   └── */
+│   ├── data/
+│   │   ├── /**
+│   │   ├── *
+│   │   └── */
 │   ├── layouts/
 │   │   └── Layout.astro
 │   ├── pages/
 │   │   └── index.astro
 │   └── sections/
-│   │   ├── /**
-│   │   ├── *
-│   │   └── */
+│       ├── /**
+│       ├── *
+│       └── */
 └── package.json
 ```
 

@@ -1,0 +1,63 @@
+---
+import { Icon } from 'astro-icon';
+
+export interface Props {
+	name: string;
+	icon: string;
+	stacks: Array<object>;
+}
+
+function calculateYears(from: Date) {
+   var difMs = Date.now() - from.getTime();
+   var diffDate = new Date(difMs);
+   return diffDate.getUTCFullYear() - 1970;
+ }
+
+const { stacks, name, icon } = Astro.props as Props;
+---
+
+<div class="flex flex-col">
+    <div class="pb-6 flex items-center justify-center gap-3">
+        <Icon class="text-sky-600" name={icon} size="2x" />
+        <h3 class="text-4xl font-bold">{name}</h3>
+    </div>
+    <div class="dark:bg-gray-800 bg-gray-200 rounded-lg py-8">
+        <ul class="flex flex-wrap items-center justify-center gap-16 px-12">
+            {stacks.map((stack) => (
+                <li class="flex flex-col gap-2 text-center cursor-pointer relative"
+                    x-data="{ tooltip: false }"
+                    x-on:mouseover="tooltip = true"
+                    x-on:mouseleave="tooltip = false"
+                >
+                    <div x-show="tooltip"
+                        x-transition:enter="transition ease-out duration-100"
+                        x-transition:enter-start="opacity-0 transform scale-95"
+                        x-transition:enter-end="opacity-100 transform scale-100"
+                        x-transition:leave="transition ease-in duration-75"
+                        x-transition:leave-start="opacity-100 transform scale-100"
+                        x-transition:leave-end="opacity-0 transform scale-95"
+                        class="text-xs flex gap-2 text-gray-100 absolute bg-gray-700 rounded-lg px-2 py-1 w-max -top-8 left-1/2 -translate-x-1/2 cursor-pointer hover:bg-sky-600"
+                        x-cloak
+                        x-on:click={`window.open('${stack.link}', '_blank')`}
+                    >
+                        {stack.description}
+                        <Icon class="" pack="mdi" name ="open-in-new" size="16"/>
+                    </div>
+                    <Icon class="" name={stack.logo} size="4x" aria-label={stack.name}/>
+                    <span class="text-sm select-none">
+                        {
+                            calculateYears(new Date(stack.fromYear, stack.fromMonth, 1)) <= 0 
+                            ? '< 1 year'
+                            : (calculateYears(new Date(stack.fromYear, stack.fromMonth, 1)) === 1 
+                                ? '1 year' 
+                                : calculateYears(new Date(stack.fromYear, stack.fromMonth, 1)) + ' years')
+                        }
+                    </span>
+                </li>
+            ))}
+        </ul>
+    </div>
+</div>
+<style>
+    [x-cloak] { display: none !important; }
+</style>

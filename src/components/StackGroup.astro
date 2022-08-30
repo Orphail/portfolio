@@ -24,7 +24,7 @@ const { stacks, name, icon } = Astro.props as Props;
     <div class="dark:bg-gray-800 bg-gray-200 rounded-lg py-8">
         <ul class="flex flex-wrap items-center justify-center gap-16 px-12">
             {stacks.map((stack) => (
-                <li class="flex flex-col gap-2 text-center cursor-pointer relative"
+                <li class="flex flex-col gap-2 text-center cursor-pointer relative select-none"
                     x-data="{ tooltip: false }"
                     x-on:mouseover="tooltip = true"
                     x-on:mouseleave="tooltip = false"
@@ -44,7 +44,7 @@ const { stacks, name, icon } = Astro.props as Props;
                         <Icon class="" pack="mdi" name ="open-in-new" size="16"/>
                     </div>
                     <Icon class="" name={stack.logo} size="4x" aria-label={stack.name}/>
-                    <span class="text-sm select-none">
+                    <span class="text-sm">
                         {
                             calculateYears(new Date(stack.fromYear, stack.fromMonth, 1)) <= 0 
                             ? '< 1 year'

@@ -4,7 +4,12 @@ import { Icon } from "astro-icon";
 
 <footer class="h-12 w-full dark:bg-gray-800 bg-gray-200 text-center dark:text-white sm:text-sm text-xs">
     <div class="flex flex-wrap items-center justify-center h-full w-full">
-        <span class="flex items-center justify-center">Made with 🖤 using Astro <Icon class="mx-2" pack="vscode-icons" name="file-type-astro" size="16"/></span>
-        <span class="flex items-center justify-center">and TailwindCSS <Icon class="mx-2" pack="vscode-icons" name="file-type-tailwind" size="16"/></span>
+        <span class="flex items-center justify-center">Made with 🖤 using<a class="link ml-2" href="https://astro.build" target="_blank">Astro</a><Icon class="mx-2" pack="vscode-icons" name="file-type-astro" size="16"/></span>
+        <span class="flex items-center justify-center">and<a class="link ml-2" href="https://tailwindcss.com" target="_blank">TailwindCSS</a><Icon class="mx-2" pack="vscode-icons" name="file-type-tailwind" size="16"/></span>
     </div>
 </footer>
+<style is:global>
+    .link {
+        @apply relative after:absolute dark:after:bg-gray-200 after:bg-gray-900 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300
+    }
+</style>

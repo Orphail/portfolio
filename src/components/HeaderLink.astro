@@ -20,13 +20,3 @@ const { href, name, external } = Astro.props as Props;
     </span>
     <Icon class={`ml-2 ${external === "true" ? 'block' : 'hidden'}`} pack="mdi" name="open-in-new" size="20"/>
 </a>
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-</script>

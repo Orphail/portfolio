@@ -43,3 +43,13 @@ const { title } = Astro.props as Props;
         @apply focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700;
     }
 </style>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>

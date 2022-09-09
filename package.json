@@ -12,9 +12,11 @@
   "devDependencies": {
     "@astrojs/alpinejs": "^0.1.0",
     "@astrojs/tailwind": "^1.0.0",
+    "@astrojs/vue": "^1.0.1",
     "@types/alpinejs": "^3.7.0",
     "alpinejs": "^3.10.3",
-    "astro": "^1.0.9"
+    "astro": "^1.0.9",
+    "vue": "^3.2.39"
   },
   "dependencies": {
     "astro-icon": "^0.7.3"

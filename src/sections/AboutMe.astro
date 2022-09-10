@@ -1,5 +1,16 @@
 ---
 import Orphail from "@/components/Orphail.astro";
+import aboutMeInfo from "@/data/about-me.json";
+
+function calculateYears(from: Date) {
+   var difMs = Date.now() - from.getTime();
+   var diffDate = new Date(difMs);
+   return diffDate.getUTCFullYear() - 1970;
+ }
+
+const yearsOfExperience = calculateYears(new Date(aboutMeInfo.fromYear, aboutMeInfo.fromMonth, 1));
+const successfulProjects = aboutMeInfo.successfulProjects;
+const companiesWorked = aboutMeInfo.companiesWorked;
 ---
 
 <section class="mt-12" id="about_me">
@@ -20,15 +31,15 @@ import Orphail from "@/components/Orphail.astro";
             <p class="text-sm md:text-lg">I have been coding for more than <b>4 years</b>, being hands-on on multiple projects and having studied, defined and implemented a specific solution for each one. My main focus is to create <b>usable software</b> that can be <b>easily maintained and expanded</b> on in the future. I also enjoy teaching and guiding people to join my cult <span class="hidden dark:inline-block">🌝</span><span class="dark:hidden inline-block">🌚</span>.</p>
             <div class="flex justify-between text-center gap-4">
                 <div>
-                    <div class="font-bold md:text-3xl text-2xl">+4 🔥</div>
+                    <div class="font-bold md:text-3xl text-2xl">+{ yearsOfExperience } 🔥</div>
                     <div class="md:text-sm text-xs">Years of experience</div>
                 </div>
                 <div>
-                    <div class="font-bold md:text-3xl text-2xl">+8 💻</div>
+                    <div class="font-bold md:text-3xl text-2xl">+{ successfulProjects } 💻</div>
                     <div class="md:text-sm text-xs">Successful projects</div>
                 </div>
                 <div>
-                    <div class="font-bold md:text-3xl text-2xl">+4 🧑‍💻</div>
+                    <div class="font-bold md:text-3xl text-2xl">{ companiesWorked } 🧑‍💻</div>
                     <div class="md:text-sm text-xs">Companies worked</div>
                 </div>
             </div>

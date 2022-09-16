@@ -54,8 +54,8 @@ const { title } = Astro.props as Props;
 	.concealed {
 		opacity: 0;
 		filter: blur(5px);
-		transform: translateX(-100%);
-		transition: all 1s;
+		transform: translateX(-25%);
+		transition: all 750ms;
 	}
 	@media(prefers-reduced-motion) {
 		.concealed {
@@ -68,17 +68,20 @@ const { title } = Astro.props as Props;
 		transform: translateX(0);
 	}
 
+	.tech:nth-child(1) {
+		transition-delay: 100ms;
+	}
 	.tech:nth-child(2) {
 		transition-delay: 200ms;
 	}
 	.tech:nth-child(3) {
-		transition-delay: 400ms;
+		transition-delay: 300ms;
 	}
 	.tech:nth-child(4) {
-		transition-delay: 600ms;
+		transition-delay: 400ms;
 	}
 	.tech:nth-child(5) {
-		transition-delay: 800ms;
+		transition-delay: 500ms;
 	}
 
 </style>

@@ -16,7 +16,7 @@ function calculateYears(from: Date) {
 const { stacks, name, icon } = Astro.props as Props;
 ---
 
-<div class="flex flex-col">
+<div class="flex flex-col concealed">
     <div class="pb-6 flex items-center justify-center gap-3">
         <Icon class="text-sky-600" name={icon} size="2x" />
         <h3 class="text-4xl font-bold">{name}</h3>
@@ -24,10 +24,12 @@ const { stacks, name, icon } = Astro.props as Props;
     <div class="dark:bg-gray-800 bg-gray-200 rounded-lg py-8">
         <ul class="flex flex-wrap items-center justify-center gap-16 px-12">
             {stacks.map((stack) => (
-                <li class="flex flex-col gap-2 text-center cursor-pointer relative select-none"
-                    x-data="{ tooltip: false }"
+                <li class="tech concealed flex flex-col gap-2 text-center cursor-pointer relative select-none"
+                    x-data="{ tooltip: false, clicked: false }"
                     x-on:mouseover="tooltip = true"
-                    x-on:mouseleave="tooltip = false"
+                    x-on:mouseleave="tooltip = clicked"
+                    x-on:click="tooltip = true; clicked = !clicked"
+                    x-on:click.away="tooltip = false; clicked = false"
                 >
                     <div x-show="tooltip"
                         x-transition:enter="transition ease-out duration-100"

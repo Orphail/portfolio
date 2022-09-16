@@ -51,6 +51,36 @@ const { title } = Astro.props as Props;
     .link {
         @apply relative after:absolute dark:after:bg-gray-200 after:bg-gray-900 after:bottom-0 after:left-0 after:h-[2px] after:w-full after:origin-bottom-left after:scale-x-100 hover:after:origin-bottom-right hover:after:scale-x-0 after:transition-transform after:ease-in-out after:duration-300
     }
+	.concealed {
+		opacity: 0;
+		filter: blur(5px);
+		transform: translateX(-100%);
+		transition: all 1s;
+	}
+	@media(prefers-reduced-motion) {
+		.concealed {
+			transition: none;
+		}
+	}
+	.revealed {
+		opacity: 1;
+		filter: blur(0);
+		transform: translateX(0);
+	}
+
+	.tech:nth-child(2) {
+		transition-delay: 200ms;
+	}
+	.tech:nth-child(3) {
+		transition-delay: 400ms;
+	}
+	.tech:nth-child(4) {
+		transition-delay: 600ms;
+	}
+	.tech:nth-child(5) {
+		transition-delay: 800ms;
+	}
+
 </style>
 <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -61,4 +91,14 @@ const { title } = Astro.props as Props;
             });
         });
     });
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('revealed')
+			}
+		});
+	});
+
+	const hiddenElements = document.querySelectorAll('.concealed');
+	hiddenElements.forEach((el) => observer.observe(el))
 </script>

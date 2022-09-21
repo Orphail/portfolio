@@ -100,7 +100,7 @@ const { title } = Astro.props as Props;
 				entry.target.classList.add('revealed')
 			}
 		});
-	});
+	}, {threshold: 0.50});
 
 	const hiddenElements = document.querySelectorAll('.concealed');
 	hiddenElements.forEach((el) => observer.observe(el))

@@ -48,11 +48,11 @@ const { stacks, name, icon } = Astro.props as Props;
                     <Icon class="" name={stack.logo} size="4x" aria-label={stack.name}/>
                     <span class="text-sm">
                         {
-                            calculateYears(new Date(stack.fromYear, stack.fromMonth, 1)) <= 0 
+                            calculateYears(new Date(stack.fromYear, stack.fromMonth-1, 1)) <= 0 
                             ? '< 1 year'
-                            : (calculateYears(new Date(stack.fromYear, stack.fromMonth, 1)) === 1 
+                            : (calculateYears(new Date(stack.fromYear, stack.fromMonth-1, 1)) === 1 
                                 ? '1 year' 
-                                : calculateYears(new Date(stack.fromYear, stack.fromMonth, 1)) + ' years')
+                                : calculateYears(new Date(stack.fromYear, stack.fromMonth-1, 1)) + ' years')
                         }
                     </span>
                 </li>

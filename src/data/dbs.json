@@ -1,5 +1,5 @@
 [
-    {"name": "SQL", "logo": "logos:postgresql", "description": "PostgreSQL / MySQL / SQL Server", "link": "https://www.postgresql.org/", "fromYear": 2018, "fromMonth": 6},
+    {"name": "SQL", "logo": "logos:postgresql", "description": "PostgreSQL / MySQL / SQL Server", "link": "https://www.postgresql.org/", "fromYear": 2018, "fromMonth": 4},
     {"name": "MongoDB", "logo": "vscode-icons:file-type-mongo", "description": "MongoDB", "link": "https://www.mongodb.com/", "fromYear": 2019, "fromMonth": 3},
     {"name": "ElasticSearch", "logo": "logos:elasticsearch", "description": "ElasticSearch", "link": "https://www.elastic.co/", "fromYear": 2019, "fromMonth": 3},
     {"name": "Redis", "logo": "logos:redis", "description": "Redis", "link": "https://redis.io//", "fromYear": 2020, "fromMonth": 8},

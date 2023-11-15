@@ -16,6 +16,8 @@
     "allowJs": true,
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "allowSyntheticDefaultImports": true,
+    "allowImportingTsExtensions": true
   }
 }

@@ -4,6 +4,28 @@ import frontend from "@/data/frontend.json";
 import backend from "@/data/backend.json";
 import dbs from "@/data/dbs.json";
 import systems from "@/data/systems.json";
+
+export interface Stack {
+    name: string;
+    logo: string;
+    description: string;
+    link: string;
+    fromYear: string;
+    fromMonth: string;
+    years: undefined|number;
+}
+
+const stacksWithYears = (stacks: any[]) => {
+    return stacks.map((stack: Stack) => {
+        const date = new Date(Number(stack.fromYear), Number(stack.fromMonth)-1, 1)
+        const difMs = Date.now() - date.getTime();
+        var diffDate = new Date(difMs);
+        
+        stack.years = diffDate.getUTCFullYear() - 1970;
+        return stack
+    })
+}
+ 
 ---
 
 <section class="mt-12" id="tech_stack">
@@ -14,9 +36,9 @@ import systems from "@/data/systems.json";
     </div>
     
     <div class="flex flex-col gap-24">
-        <StackGroup name="Frontend" stacks={frontend} icon="mdi:code" />
-        <StackGroup name="Backend" stacks={backend} icon="mdi:code-braces" />
-        <StackGroup name="Databases" stacks={dbs} icon="mdi:database-outline" />
-        <StackGroup name="Systems" stacks={systems} icon="mdi:cog-outline" />
+        <StackGroup name="Frontend" stacks={stacksWithYears(frontend)} icon="mdi:code" />
+        <StackGroup name="Backend" stacks={stacksWithYears(backend)} icon="mdi:code-braces" />
+        <StackGroup name="Databases" stacks={stacksWithYears(dbs)} icon="mdi:database-outline" />
+        <StackGroup name="Systems" stacks={stacksWithYears(systems)} icon="mdi:cog-outline" />
     </div>
 </section>

@@ -15,7 +15,7 @@
     "@astrojs/vue": "^5.0.9",
     "@types/alpinejs": "^3.7.0",
     "alpinejs": "^3.10.3",
-    "astro": "^5.13.10",
+    "astro": "^5.15.9",
     "vue": "^3.2.39"
   },
   "dependencies": {

@@ -13,6 +13,7 @@ export interface Stack {
     fromYear: string;
     fromMonth: string;
     years: undefined|number;
+    maxYears: undefined|number;
 }
 
 const stacksWithYears = (stacks: any[]) => {
@@ -22,6 +23,10 @@ const stacksWithYears = (stacks: any[]) => {
         var diffDate = new Date(difMs);
         
         stack.years = diffDate.getUTCFullYear() - 1970;
+
+        if (stack.maxYears && stack.years > stack.maxYears) {
+            stack.years = stack.maxYears
+        }
         return stack
     })
 }

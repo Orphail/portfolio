@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 import { Stack } from '../sections/TechStack.astro'
 
 export interface Props {
@@ -14,7 +14,7 @@ const { stacks, name, icon } = Astro.props as Props;
 
 <div class="flex flex-col">
     <div class="pb-6 flex items-center justify-center gap-3">
-        <Icon class="text-sky-600" name={icon} size="2x" />
+        <Icon class="text-sky-600" name={icon} size="2em" />
         <h3 class="text-4xl font-bold">{name}</h3>
     </div>
     <div class="dark:bg-gray-800 bg-gray-200 rounded-lg py-8">
@@ -39,12 +39,12 @@ const { stacks, name, icon } = Astro.props as Props;
                         x-on:click={`window.open('${link}', '_blank')`}
                     >
                         {description}
-                        <Icon class="" pack="mdi" name ="open-in-new" size="16"/>
+                        <Icon class="" name ="mdi:open-in-new" size="16"/>
                     </div>
-                    <Icon class="" name={logo} size="4x" aria-label={name}/>
-                    {years <= 0 && <span class="text-sm">'< 1 year'</span>}
-                    {years === 1 && <span class="text-sm">1 year</span>}
-                    {years > 1 && <span class="text-sm">{years + ' years'}</span>}
+                    <Icon class="" name={logo} size="4em" aria-label={name}/>
+                    <!--{years <= 0 && <span class="text-sm">'< 1 year'</span>}-->
+                    <!--{years === 1 && <span class="text-sm">1 year</span>}-->
+                    <!--{years > 1 && <span class="text-sm">{years + ' years'}</span>}-->
                 </li>
             )}
         </ul>

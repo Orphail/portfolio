@@ -1,5 +1,5 @@
 ---
-import Icon from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 import DarkModeButton from '@/components/DarkModeButton.vue';
 import HeaderLink from '@/components/HeaderLink.astro';
 ---
@@ -36,6 +36,6 @@ import HeaderLink from '@/components/HeaderLink.astro';
     <DarkModeButton client:load/>
     <div @click="toggleMenu = !toggleMenu"
          class="sm:hidden text-gray-900 dark:text-gray-100 hover:text-gray-700 dark:hover:text-gray-100 rounded-lg sm:button-focus p-1.5 cursor-pointer">
-        <Icon pack="mdi" name="menu" size="2x"/>
+        <Icon name="mdi:menu" size="2em"/>
     </div>
 </header>

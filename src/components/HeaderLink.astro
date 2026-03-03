@@ -1,5 +1,5 @@
 ---
-import Icon from 'astro-icon';
+import { Icon } from 'astro-icon/components';
 
 export interface Props {
 	href: string;
@@ -16,5 +16,5 @@ const { href, name, external } = Astro.props as Props;
     class="flex items-center justify-center text-gray-900 dark:text-gray-100"
 >
     <span class="link">{name}</span>
-    <Icon class={`ml-2 ${external === "true" ? 'block' : 'hidden'}`} pack="mdi" name="open-in-new" size="20"/>
+    <Icon class={`ml-2 ${external === "true" ? 'block' : 'hidden'}`} name="mdi:open-in-new" size="20"/>
 </a>

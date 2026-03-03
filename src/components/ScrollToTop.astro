@@ -1,5 +1,5 @@
 ---
-import { Icon } from 'astro-icon'
+import { Icon } from 'astro-icon/components'
 ---
 
 <div class="hidden sm:inline-flex button-focus
@@ -11,5 +11,5 @@ import { Icon } from 'astro-icon'
     @scroll.window="currentScroll = window.scrollY;"
     @click="window.scrollTo({top: 0, behavior: 'smooth'})"
 >
-    <Icon class="" pack="mdi" name="arrow-up-bold" size="26" />
+    <Icon class="" name="mdi:arrow-up-bold" size="26" />
 </div>

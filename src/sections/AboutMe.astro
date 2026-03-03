@@ -3,12 +3,12 @@ import Orphail from "@/components/Orphail.astro";
 import aboutMeInfo from "@/data/about-me.json";
 
 function calculateYears(from: Date) {
-   var difMs = Date.now() - from.getTime();
-   var diffDate = new Date(difMs);
-   return diffDate.getUTCFullYear() - 1970;
- }
+    var difMs = Date.now() - from.getTime();
+    var diffDate = new Date(difMs);
+    return diffDate.getUTCFullYear() - 1970;
+}
 
-const yearsOfExperience = calculateYears(new Date(aboutMeInfo.fromYear, aboutMeInfo.fromMonth-1, 1));
+const yearsOfExperience = calculateYears(new Date(aboutMeInfo.fromYear, aboutMeInfo.fromMonth - 1, 1));
 const successfulProjects = aboutMeInfo.successfulProjects;
 const companiesWorked = aboutMeInfo.companiesWorked;
 ---
@@ -19,7 +19,7 @@ const companiesWorked = aboutMeInfo.companiesWorked;
             <span class="hover-underline-effect">About</span>
         </h2>
     </div>
-    
+
     <div class="flex items-center justify-around lg:gap-16">
         <div class="hidden lg:flex items-center relative w-5/6 h-fit aspect-square dark:bg-gray-800 bg-gray-200 xl:p-10 p-16 rounded-full">
             <Orphail/>
@@ -27,19 +27,23 @@ const companiesWorked = aboutMeInfo.companiesWorked;
         <div class="flex flex-col justify-between gap-10 dark:lg:bg-inherit dark:bg-gray-800 lg:bg-inherit bg-gray-200 bg-gray-inherit rounded-lg lg:p-0 p-8">
             <div class="lg:hidden flex items-center justify-center relative w-full h-28">
                 <Orphail/>
-            </div>    
-            <p class="text-sm md:text-lg">I have been coding for more than <b>{ yearsOfExperience } years</b>, being hands-on on multiple projects and having studied, defined and implemented a specific solution for each one. My main focus is to create <b>usable software</b> that can be <b>easily maintained and expanded</b> on in the future. I also enjoy teaching and guiding people to join my cult <span class="hidden dark:inline-block">🌝</span><span class="dark:hidden inline-block">🌚</span>.</p>
+            </div>
+            <p class="text-sm md:text-lg">I have been coding for more than <b>{yearsOfExperience} years</b>, being
+                hands-on on multiple projects and having studied, defined and implemented a specific solution for each
+                one. My main focus is to create <b>usable software</b> that can be <b>easily maintained and expanded</b>
+                on in the future. I also enjoy teaching and guiding people to join my cult <span
+                        class="hidden dark:inline-block">🌝</span><span class="dark:hidden inline-block">🌚</span>.</p>
             <div class="flex justify-between text-center gap-4">
                 <div class="">
-                    <div class="font-bold md:text-3xl text-2xl">+{ yearsOfExperience } 🔥</div>
+                    <div class="font-bold md:text-3xl text-2xl">+{yearsOfExperience} 🔥</div>
                     <div class="md:text-sm text-xs">Years of experience</div>
                 </div>
                 <div class="">
-                    <div class="font-bold md:text-3xl text-2xl">+{ successfulProjects } 💻</div>
+                    <div class="font-bold md:text-3xl text-2xl">+{successfulProjects} 💻</div>
                     <div class="md:text-sm text-xs">Successful projects</div>
                 </div>
                 <div class="">
-                    <div class="font-bold md:text-3xl text-2xl">{ companiesWorked } 🧑‍💻</div>
+                    <div class="font-bold md:text-3xl text-2xl">{companiesWorked} 🧑‍💻</div>
                     <div class="md:text-sm text-xs">Companies worked</div>
                 </div>
             </div>

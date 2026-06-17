@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.button-focus:focus {
+	outline: 2px solid transparent;
+	outline-offset: 2px;
+	box-shadow: 0 0 0 4px rgb(229 231 235);
+}
+
+.dark .button-focus:focus {
+	box-shadow: 0 0 0 4px rgb(55 65 81);
+}
+
+@media (min-width: 640px) {
+	.sm\:button-focus:focus {
+		outline: 2px solid transparent;
+		outline-offset: 2px;
+		box-shadow: 0 0 0 4px rgb(229 231 235);
+	}
+
+	.dark .sm\:button-focus:focus {
+		box-shadow: 0 0 0 4px rgb(55 65 81);
+	}
+}
+
+.link {
+	position: relative;
+}
+
+.link::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: rgb(17 24 39);
+	transform-origin: bottom left;
+	transform: scaleX(1);
+	transition: transform 300ms ease-in-out;
+	content: "";
+}
+
+.dark .link::after {
+	background-color: rgb(229 231 235);
+}
+
+.link:hover::after {
+	transform-origin: bottom right;
+	transform: scaleX(0);
+}
+
+.hover-underline-effect {
+	position: relative;
+}
+
+.hover-underline-effect::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: rgb(0 0 0);
+	opacity: 0;
+	transform: translateY(0);
+	transition: all 200ms ease-in-out;
+	content: "";
+}
+
+.dark .hover-underline-effect::after {
+	background-color: rgb(229 231 235);
+}
+
+.hover-underline-effect:hover::after {
+	opacity: 1;
+	transform: translateY(0.25rem);
+}

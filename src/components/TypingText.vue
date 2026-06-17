@@ -7,7 +7,7 @@
     </div>
 </template>
 <script setup>
-    import { ref, onMounted, defineProps } from 'vue'
+    import { ref, onMounted } from 'vue'
     const props = defineProps({
         typeSpeed: Number,
         cursorSpeed: Number,

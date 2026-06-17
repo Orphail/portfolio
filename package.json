@@ -10,17 +10,18 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/alpinejs": "^0.4.9",
-    "@astrojs/tailwind": "^6.0.2",
-    "@astrojs/vue": "^5.1.4",
-    "@iconify-json/devicon": "^1.2.59",
-    "@iconify-json/logos": "^1.2.10",
+    "@astrojs/alpinejs": "^0.5.0",
+    "@astrojs/vue": "^6.0.1",
+    "@iconify-json/devicon": "^1.2.62",
+    "@iconify-json/logos": "^1.2.11",
     "@iconify-json/mdi": "^1.2.3",
-    "@iconify-json/vscode-icons": "^1.2.44",
+    "@iconify-json/vscode-icons": "^1.2.58",
+    "@tailwindcss/postcss": "^4.3.1",
     "@types/alpinejs": "^3.13.11",
-    "alpinejs": "^3.15.8",
-    "astro": "^5.18.1",
-    "vue": "^3.5.29"
+    "alpinejs": "^3.15.12",
+    "astro": "6.4.7",
+    "tailwindcss": "^4.3.1",
+    "vue": "^3.5.38"
   },
   "dependencies": {
     "astro-icon": "^1.1.5"
